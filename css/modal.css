@@ -1,0 +1,121 @@
+/*
+ * NAME: Modal CSS for jQ Photographer's Exchange
+ * AUTHOR: Jay Blanchard
+ * DATE: 2011-03-05
+ * BUSINESS RULE:   <if applicable>
+ *
+ * REVISION:    a20110305jb
+ * STATUS:      open
+ * USAGE:       call from web pages to provide modal style                        
+ *
+ * NOTES:       Color Pallette
+ *              NAME        HEX     R   G   B
+ *              olive       3B3013  59  48  19
+ *              tan         8F6031  143 96  49
+ *              mustard     E88833  232 136 51
+ *              blood       9C0C0A  156 12  10
+ *              eggshell    FDF3C1  253 243 193
+ *              greycard1   0A0A0A  10  10  10
+ *              greycard2   1E1E1E  30  30  30
+ *              greycard3   323232  50  50  50
+ *              greycard4   464646  70  70  70
+ *              greycard5   595959  89  89  89
+ *
+ * REVISION HISTORY
+ * 
+ * a20110305jb  - create initial CSS
+ *
+ */
+input {
+	margin: 1px 2px 0px 2px;
+}
+.label {
+	width: 100px;
+	float: left;
+	margin: 1px 0px 0px 0px;
+}
+.lableCheckbox {
+	width: 100px;
+    float: right;
+    margin: 1px 0px 0px 0px;
+}
+.labelLong {
+	width: 250px;
+	float: left;
+	margin: 1px 0px 0px 0px;
+}
+.modalNote {
+	font-size: 0.7em;
+}
+.formTable {
+	width: 100%;
+}
+.formTable td {
+	padding: 2px 5px 0px 0px;
+}
+#usernameError {
+	display: none;
+	color: #FF0000;
+	font-size: 0.7em;
+	margin: 0px 0px 0px 5px;
+}
+#modalShade {
+    display: none;
+    background: #3B3013;
+    position: fixed; 
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: 100;
+}
+.registerModal {
+    display: none;
+    background: #FDF3C1;
+    color: #000000;
+    padding: 20px;
+    border: 20px solid #8F6031;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    height: 375px;
+    width: 625px;
+    top: 50%;
+    left: 50%;
+    z-index: 200;
+}
+.loginModal {
+    display: none;
+    background: #FDF3C1;
+    color: #000000;
+    padding: 20px;
+    border: 20px solid #8F6031;
+    font-size: 1.2em;
+    float: left;
+    position: fixed;
+    height: 175px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    z-index: 200;
+}
+.searchModal {
+    display: none;
+    background: #FDF3C1;
+    color: #000000;
+    padding: 20px;
+    border: 20px solid #8F6031;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    height: 150px;
+    width: 550px;
+    top: 50%;
+    left: 50%;
+    z-index: 200;
+}
+img.close_button {
+	float: right;
+    margin: -55px -55px 0px 0px;
+    border: none;
+}

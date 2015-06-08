@@ -1,0 +1,63 @@
+/*
+ * NAME: SpriteNav
+ * AUTHOR: Jay Blanchard
+ * DATE: 2011-01-10
+ * BUSINESS RULE: <if applicable>
+ *
+ * REVISION:   a2011-0110jb
+ * STATUS:     open
+ * USAGE:      called by browser          
+ *
+ */
+
+/* basic configuration items */
+   #spriteNav {
+      height: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+   
+   #spriteNav li {
+      float: left;
+   }
+   #spriteNav li a {
+      background: url(../grfx/mainNav.jpg) no-repeat;
+      display: block;
+      height: 30px;
+      position: relative;
+   }
+   #spriteNav li a span {
+      background: url(../grfx/mainNav.jpg) no-repeat;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 30px;
+      width: 100%;
+   }
+
+/* each item must have a starting location and width */
+   #spriteNav li a#search {
+      width: 100px;
+   }
+   #spriteNav li a#register {
+      width: 110px;
+      background-position: -100px 0px;
+   }
+   #spriteNav li a#login {
+      width: 90px;
+      background-position: -210px 0px;
+   }
+
+/* each item must have a location for the hovered item */
+   #spriteNav li a#search span {
+      background-position: 0px -30px;
+   }
+   #spriteNav li a#register span {
+      background-position: -100px -30px;
+   }
+   #spriteNav li a#login span {
+      background-position: -210px -30px;
+   }
+   
