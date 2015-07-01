@@ -1,80 +1,78 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>Manu's portal</title>
-        <link rel="stylesheet" href="css/primary.css" type="text/css" />
-        <link rel="stylesheet" href="css/spritenav.css" type="text/css" />
-        <link rel="stylesheet" href="css/modal.css" type="text/css" />
-        <link rel="stylesheet" href="css/carousel.css" type="text/css" />
-        <script type="text/javascript" src="inc/jquery-1.5.min.js"></script>
-        <script type="text/javascript" src="inc/jquery.ez-bg-resize.js"></script>
-        <script type="text/javascript" src="inc/spritenav.js"></script>
-        <script type="text/javascript" src="inc/carousel.js"></script>
-        <script type="text/javascript" src="inc/jqpe.js"></script>
-    </head>
-    <body>
-        <div id="header"></div>
-        <div id="navMenu">
-            <ul id="spriteNav">
-                <li><a href="search.php" rel="searchWindow" class="modal" id="search"><span>Search</span></a></li>
-                <li><a href="register.php" rel="registerWindow" class="modal" id="register"><span>Register</span></a></li>
-                <li><a href="login.php" rel="loginWindow" class="modal" id="login"><span>Login</span></a></li>
-            </ul>   
-        </div>
-        <div id="content">
-	        <p>Hello! Welcome to my page</p>
-			<p>Slect your options from the tool bar </p>
-        </div>
-        
-        <!-- divs for modal windows -->
-        <div id="searchWindow" class="searchModal">
-            <h2>Search</h2>
-            <form name="search" action="inc/search.php" method="post">
-                <label class="label" for="pesearch">Search For: </label><input type="text" name="pesearch" id="pesearch" size="64" /><br />
-                <label class="label">&nbsp;</label><input type="submit" value="Search" /><input type="reset" value="Clear" />
-            </form>
-        </div>
-        <div id="registerWindow" class="registerModal">
-            <h2>Register</h2>
-            <form name="register" action="inc/peregister.php" method="post">
-                <label class="labelLong" for="penewuser">Please choose a user name: </label><input type="text" name="penewuser" id="penewuser" size="24" /><span id="usernameError">name taken, please choose another</span><br />
-                <label class="labelLong" for="penewpass">Please choose a password: </label><input type="password" name="penewpass" id="penewpass" size="24" /><br />
-                <label class="label" for="pefirstname">First Name: </label><input type="text" name="pefirstname" id="pefirstname" size="16" /><br />
-                <label class="label" for="pelastname">Last Name: </label><input type="text" name="pelastname" id="pelastname" size="24" /><br />
-                <label class="label" for="email">E-mail: </label><input type="text" name="email" id="email" size="48" /><br />
-                <h3>Photography Interests<span class="modalNote"> (choose all that apply)</span></h3>
-                <table class="formTable">
-                    <tr>
-                        <td><input type="checkbox" name="interests[]" id="portrait" value="portrait" /><label class="labelCheckbox" for="portrait">Potrait</label></td>
-                        <td><input type="checkbox" name="interests[]" id="landscape" value="landscape" /><label class="labelCheckbox" for="landscape">Landscape</label></td>
-                        <td><input type="checkbox" name="interests[]" id="macro" value="macro" /><label class="labelCheckbox" for="macro">Macro</label></td>
-                        <td><input type="checkbox" name="interests[]" id="stilllife" value="stilllife" /><label class="labelCheckbox" for="stilllife">Still Life</label></td>
-                        <td><input type="checkbox" name="interests[]" id="corporate" value="corporate" /><label class="labelCheckbox" for="corporate">Corporate</label></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="interests[]" id="sports" value="sports" /><label class="labelCheckbox" for="sports">Sports</label></td>
-                        <td><input type="checkbox" name="interests[]" id="pets" value="pets" /><label class="labelCheckbox" for="pets">Pets</label></td>
-                        <td><input type="checkbox" name="interests[]" id="astronomy" value="astronomy" /><label class="labelCheckbox" for="astronomy">Astronomy</label></td>
-                        <td><input type="checkbox" name="interests[]" id="wildlife" value="wildlife" /><label class="labelCheckbox" for="wildlife">Wildlife</label></td>
-                        <td><input type="checkbox" name="interests[]" id="journalism" value="journalism" /><label class="labelCheckbox" for="journalism">Journalism</label></td>
-                    </tr>
-                </table>
-                <input type="hidden" name="formName" value="register" />
-                <label class="label">&nbsp;</label><input type="submit" value="Register" /><input type="reset" value="Clear" />
-                <p class="modalNote">You can update your interests at any time by modifying settings in "My Account".</p>
-            </form>
-        </div>
-        <div id="loginWindow" class="loginModal">
-            <h2>Login</h2>
-            <form name="login" action="inc/peregister.php" method="post">
-                <label class="label" for="pename">User Name: </label><input type="text" name="pename" id="pename" size="24" /><br />
-                <label class="label" for="pepass">Password: </label><input type="password" name="pepass" id="pepass" size="24" /><br />
-                <input type="checkbox" name="remember" id="remember" value="remember" /><span class="modalNote"> remember me on this computer</span>
-                <input type="hidden" name="formName" value="login" />
-                <label class="label">&nbsp;</label><input type="submit" value="Login" /><input type="reset" value="Clear" />
-            </form>
-        </div>
-        <div id="bodyBackground"><img src="grfx/background.jpg" alt=""></div>
-    </body>
+<link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="userCtrl">
+
+<div class="container">
+
+<h3>Users</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Edit</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users">
+      <td>
+        <button class="btn" ng-click="editUser(user.id)">
+          <span class="glyphicon glyphicon-pencil"></span>  Edit
+        </button>
+      </td>
+      <td>{{ user.fName }}</td>
+      <td>{{ user.lName }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+<button class="btn btn-success" ng-click="editUser('new')">
+<span class="glyphicon glyphicon-user"></span>  Create New User
+</button>
+<hr>
+
+<h3 ng-show="edit">Create New User:</h3>
+<h3 ng-hide="edit">Edit User:</h3>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">First Name:</label>
+    <div class="col-sm-10">
+    <input type="text" ng-model="fName" ng-disabled="!edit" placeholder="First Name">
+    </div>
+  </div> 
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Last Name:</label>
+    <div class="col-sm-10">
+    <input type="text" ng-model="lName" ng-disabled="!edit" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Password:</label>
+    <div class="col-sm-10">
+    <input type="password" ng-model="passw1" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Repeat:</label>
+    <div class="col-sm-10">
+    <input type="password" ng-model="passw2" placeholder="Repeat Password">
+    </div>
+  </div>
+</form>
+
+<hr>
+<button class="btn btn-success" ng-disabled="error || incomplete">
+<span class="glyphicon glyphicon-save"></span>  Save Changes
+</button>
+
+</div>
+
+<script src= "myUsers.js"></script>
+
+</body>
 </html>
